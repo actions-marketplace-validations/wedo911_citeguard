@@ -1,0 +1,35 @@
+{
+  "name": "citeguard-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server that checks citations (DOIs) for retractions, corrections, and expressions of concern via Crossref -- so an AI agent doing research or writing can self-check its own citations before including them.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "citeguard-mcp-server": "dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "npm run build && node --test tests/analyze.test.mjs tests/parsers.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wedo911/citeguard.git",
+    "directory": "mcp-server"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

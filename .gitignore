@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# Node / MCP server
+mcp-server/node_modules/
+mcp-server/dist/
+mcp-server/*.log
+
+# misc
+*.log
+.DS_Store

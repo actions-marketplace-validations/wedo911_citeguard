@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "citeguard"
+version = "0.1.0"
+description = "Check citations for retractions, corrections, and expressions of concern via Crossref -- zero-dependency library, CLI, and CI-friendly checker."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "citeguard contributors" }]
+keywords = [
+    "research-integrity",
+    "retraction",
+    "citations",
+    "crossref",
+    "bibliography",
+    "academic-writing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing :: Markup :: LaTeX",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/wedo911/citeguard"
+Issues = "https://github.com/wedo911/citeguard/issues"
+
+[project.scripts]
+citeguard = "citeguard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

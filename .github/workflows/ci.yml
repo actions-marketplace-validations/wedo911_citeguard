@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install citeguard with dev dependencies
+        run: pip install -e ".[dev]"
+      - name: Run tests
+        run: pytest -v
+
+  mcp-server:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ["18", "20", "22"]
+    defaults:
+      run:
+        working-directory: mcp-server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build
+      - run: node --test tests/analyze.test.mjs tests/parsers.test.mjs
+
+  action-smoke-test:
+    runs-on: ubuntu-latest
+    needs: python
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bibliography with a known-retracted DOI must fail the check
+        id: should_fail
+        continue-on-error: true
+        uses: ./
+        with:
+          path: .github/workflows/fixtures/retracted-example.bib
+      - name: Verify the action actually failed
+        if: steps.should_fail.outcome != 'failure'
+        run: |
+          echo "Expected the action to fail on a bibliography containing a known-retracted DOI, but it did not."
+          exit 1
+      - name: Bibliography with only a clean DOI must pass the check
+        uses: ./
+        with:
+          path: .github/workflows/fixtures/clean-example.bib

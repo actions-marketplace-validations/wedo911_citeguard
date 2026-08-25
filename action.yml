@@ -1,0 +1,37 @@
+name: "citeguard"
+description: "Check a bibliography file for retracted, corrected, or concerning citations via Crossref."
+author: "citeguard contributors"
+
+inputs:
+  path:
+    description: "Path to a bibliography file (.bib or .ris) or plain text file to check."
+    required: true
+  fail-on:
+    description: "Severity threshold that fails the check: never, retracted, concern, corrected."
+    required: false
+    default: "concern"
+  mailto:
+    description: "Contact email for Crossref's faster polite API pool (recommended)."
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.x"
+
+    - name: Install citeguard
+      shell: bash
+      run: pip install "${{ github.action_path }}"
+
+    - name: Check citations
+      shell: bash
+      run: |
+        ARGS=(file "${{ inputs.path }}" --fail-on "${{ inputs.fail-on }}")
+        if [ -n "${{ inputs.mailto }}" ]; then
+          ARGS+=(--mailto "${{ inputs.mailto }}")
+        fi
+        citeguard "${ARGS[@]}"
