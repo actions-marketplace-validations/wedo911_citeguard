@@ -17,7 +17,7 @@ import { registerCheckCitations } from "./tools/checkCitations.js";
 
 const server = new McpServer({
   name: "citeguard-mcp-server",
-  version: "0.1.1",
+  version: "0.1.2",
 });
 
 registerCheckCitation(server);

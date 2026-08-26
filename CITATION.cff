@@ -19,7 +19,7 @@ authors:
 repository-code: "https://github.com/wedo911/citeguard"
 url: "https://github.com/wedo911/citeguard"
 license: MIT
-version: 0.1.1
+version: 0.1.2
 date-released: "2026-08-26"
 keywords:
   - retraction

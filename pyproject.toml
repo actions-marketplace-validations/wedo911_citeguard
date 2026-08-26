@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "citeguard-cli"
-version = "0.1.1"
+version = "0.1.2"
 description = "Check a bibliography for retracted papers -- retractions, corrections, and expressions of concern via Crossref (including Retraction Watch records). CLI, Python library, MCP server, GitHub Action."
 readme = "README.md"
 requires-python = ">=3.9"

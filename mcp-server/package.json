@@ -1,6 +1,6 @@
 {
   "name": "citeguard-mcp-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MCP server that checks whether a cited paper has been retracted, corrected, or flagged with an expression of concern -- via Crossref, including Retraction Watch records. No API key.",
   "type": "module",
   "main": "dist/index.js",
