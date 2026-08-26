@@ -68,10 +68,10 @@ citeguard file references.bib --fail-on retracted   # for CI, see below
 { "mcpServers": { "citeguard": { "command": "node", "args": ["/path/to/citeguard/mcp-server/dist/index.js"] } } }
 ```
 
-**GitHub Action** (in another repo's workflow):
+**GitHub Action** — on the [GitHub Marketplace](https://github.com/marketplace/actions/citeguard-retracted-citation-checker). Add to any repository that holds a manuscript and its bibliography:
 
 ```yaml
-- uses: wedo911/citeguard@main
+- uses: wedo911/citeguard@v0.1.1
   with:
     path: references.bib
     fail-on: concern   # never | retracted | concern | corrected
