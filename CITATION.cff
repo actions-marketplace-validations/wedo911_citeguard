@@ -1,4 +1,5 @@
 cff-version: 1.2.0
+doi: "10.5281/zenodo.22115109"
 message: "If you use citeguard in your work, please cite it as below."
 title: "citeguard: retraction, correction, and expression-of-concern checking for citations"
 abstract: >-
@@ -17,6 +18,13 @@ authors:
     given-names: Waleed
     alias: wedo911
 repository-code: "https://github.com/wedo911/citeguard"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22115109"
+    description: "Concept DOI — always resolves to the latest archived version"
+  - type: doi
+    value: "10.5281/zenodo.22115110"
+    description: "DOI for version 0.1.2"
 url: "https://github.com/wedo911/citeguard"
 license: MIT
 version: 0.1.2

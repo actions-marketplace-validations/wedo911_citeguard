@@ -1,5 +1,7 @@
 # citeguard
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22115109.svg)](https://doi.org/10.5281/zenodo.22115109) [![PyPI](https://img.shields.io/pypi/v/citeguard-cli?label=PyPI)](https://pypi.org/project/citeguard-cli/) [![npm](https://img.shields.io/npm/v/citeguard-mcp-server?label=npm)](https://www.npmjs.com/package/citeguard-mcp-server) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Retracted papers get cited for years after retraction. Andrew Wakefield's
 fraudulent 1998 paper linking the MMR vaccine to autism — retracted in
 2010 — has been cited well over a thousand times *since* its retraction,
@@ -77,7 +79,7 @@ Published on npm as [`citeguard-mcp-server`](https://www.npmjs.com/package/citeg
 **GitHub Action** — on the [GitHub Marketplace](https://github.com/marketplace/actions/citeguard-retracted-citation-checker). Add to any repository that holds a manuscript and its bibliography:
 
 ```yaml
-- uses: wedo911/citeguard@v0.1.1
+- uses: wedo911/citeguard@v0.1.2
   with:
     path: references.bib
     fail-on: concern   # never | retracted | concern | corrected
@@ -126,6 +128,17 @@ it as a real, cited Crossref fixture over a synthetic one where possible
 found during development (a URL-encoding bug in the DOI request path, and
 a BibTeX parser that could swallow an adjacent entry when parsing a
 malformed `@comment` block).
+
+## Citing citeguard
+
+Archived on Zenodo with a DOI, so it can be cited in a paper:
+
+> Bajaman, W. (2026). *citeguard: retraction, correction, and expression-of-concern
+> checking for citations.* Zenodo. https://doi.org/10.5281/zenodo.22115109
+
+That DOI always resolves to the latest archived version. GitHub's
+**Cite this repository** button generates BibTeX and APA from
+[`CITATION.cff`](CITATION.cff).
 
 ## License
 
