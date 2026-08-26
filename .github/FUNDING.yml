@@ -1,0 +1,9 @@
+# Support for the free, open-source tools in this account.
+# https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+custom: ["https://paypal.me/wedo911"]
+
+# Once GitHub Sponsors is approved and live on the account, uncomment the
+# line below. It renders a native "Sponsor" button and keeps the email
+# address private, which a raw address in a README does not.
+# github: [wedo911]
