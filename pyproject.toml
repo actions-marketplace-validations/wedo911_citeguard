@@ -4,19 +4,40 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "citeguard-cli"
-version = "0.1.0"
-description = "Check citations for retractions, corrections, and expressions of concern via Crossref -- zero-dependency library, CLI, and CI-friendly checker."
+version = "0.1.1"
+description = "Check a bibliography for retracted papers -- retractions, corrections, and expressions of concern via Crossref (including Retraction Watch records). CLI, Python library, MCP server, GitHub Action."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "citeguard contributors" }]
 keywords = [
-    "research-integrity",
     "retraction",
+    "retracted",
+    "retracted-papers",
+    "retraction-watch",
+    "expression-of-concern",
+    "corrigendum",
+    "erratum",
     "citations",
-    "crossref",
+    "citation-checker",
     "bibliography",
+    "bibtex",
+    "ris",
+    "doi",
+    "crossref",
+    "research-integrity",
+    "reproducibility",
+    "open-science",
+    "scholarly",
     "academic-writing",
+    "literature-review",
+    "systematic-review",
+    "peer-review",
+    "metascience",
+    "mcp",
+    "mcp-server",
+    "github-action",
+    "ci",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

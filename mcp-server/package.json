@@ -1,7 +1,7 @@
 {
   "name": "citeguard-mcp-server",
-  "version": "0.1.0",
-  "description": "MCP server that checks citations (DOIs) for retractions, corrections, and expressions of concern via Crossref -- so an AI agent doing research or writing can self-check its own citations before including them.",
+  "version": "0.1.1",
+  "description": "MCP server that checks whether a cited paper has been retracted, corrected, or flagged with an expression of concern -- via Crossref, including Retraction Watch records. No API key.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -17,13 +17,24 @@
     "mcp",
     "modelcontextprotocol",
     "mcp-server",
+    "model-context-protocol",
     "retraction",
+    "retracted",
+    "retraction-watch",
+    "expression-of-concern",
     "citations",
-    "crossref",
-    "research-integrity",
+    "citation-checker",
     "bibliography",
     "doi",
-    "academic"
+    "crossref",
+    "research-integrity",
+    "reproducibility",
+    "open-science",
+    "scholarly",
+    "academic",
+    "literature-review",
+    "peer-review",
+    "ai-agent"
   ],
   "scripts": {
     "start": "node dist/index.js",
