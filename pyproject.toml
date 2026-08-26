@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "citeguard"
+name = "citeguard-cli"
 version = "0.1.0"
 description = "Check citations for retractions, corrections, and expressions of concern via Crossref -- zero-dependency library, CLI, and CI-friendly checker."
 readme = "README.md"

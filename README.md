@@ -57,13 +57,14 @@ for the fully-commented implementation.
 **CLI:**
 
 ```bash
-pip install git+https://github.com/wedo911/citeguard.git
+pip install citeguard-cli
 citeguard doi 10.1016/S0140-6736(97)11096-0
 citeguard file references.bib --fail-on retracted   # for CI, see below
 ```
 
-(Installing from git rather than PyPI: the name `citeguard` on PyPI belongs
-to an unrelated project. Use `pip install -e .` if you've cloned this repo.)
+The distribution is named `citeguard-cli` on PyPI because the plain
+`citeguard` name there belongs to an unrelated project. The command and the
+import are still `citeguard`.
 
 **MCP server** (add to your client's config, e.g. `.mcp.json`):
 
