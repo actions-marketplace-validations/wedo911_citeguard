@@ -21,15 +21,30 @@ both surfaces agree on ground truth.
 
 ## Install and configure
 
+Nothing to clone or build — add this to your MCP client's config
+(e.g. `claude_desktop_config.json`, or a project's `.mcp.json` for
+Claude Code):
+
+```json
+{
+  "mcpServers": {
+    "citeguard": {
+      "command": "npx",
+      "args": ["-y", "citeguard-mcp-server"]
+    }
+  }
+}
+```
+
+<details>
+<summary>Running from a local checkout instead</summary>
+
 ```bash
 git clone https://github.com/wedo911/citeguard.git
 cd citeguard/mcp-server
 npm install
 npm run build
 ```
-
-Add it to your MCP client's config (e.g. `claude_desktop_config.json`, or
-a project's `.mcp.json` for Claude Code):
 
 ```json
 {
@@ -41,6 +56,8 @@ a project's `.mcp.json` for Claude Code):
   }
 }
 ```
+
+</details>
 
 ## Troubleshooting: network errors for every DOI
 

@@ -68,8 +68,10 @@ to an unrelated project. Use `pip install -e .` if you've cloned this repo.)
 **MCP server** (add to your client's config, e.g. `.mcp.json`):
 
 ```json
-{ "mcpServers": { "citeguard": { "command": "node", "args": ["/path/to/citeguard/mcp-server/dist/index.js"] } } }
+{ "mcpServers": { "citeguard": { "command": "npx", "args": ["-y", "citeguard-mcp-server"] } } }
 ```
+
+Published on npm as [`citeguard-mcp-server`](https://www.npmjs.com/package/citeguard-mcp-server) — nothing to clone or build. To run it from a local checkout instead, point `command` at `node` and `args` at `mcp-server/dist/index.js`.
 
 **GitHub Action** — on the [GitHub Marketplace](https://github.com/marketplace/actions/citeguard-retracted-citation-checker). Add to any repository that holds a manuscript and its bibliography:
 
