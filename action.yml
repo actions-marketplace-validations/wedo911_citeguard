@@ -1,6 +1,10 @@
-name: "citeguard"
-description: "Check a bibliography file for retracted, corrected, or concerning citations via Crossref."
+name: "citeguard — retracted citation checker"
+description: "Fail CI when a bibliography cites a retracted paper. Checks every DOI against Crossref and Retraction Watch data. No API key."
 author: "citeguard contributors"
+
+branding:
+  icon: "shield"
+  color: "blue"
 
 inputs:
   path:
