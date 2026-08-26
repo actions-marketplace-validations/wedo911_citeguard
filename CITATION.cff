@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use citeguard in your work, please cite it as below."
+title: "citeguard: retraction, correction, and expression-of-concern checking for citations"
+abstract: >-
+  citeguard checks whether a cited work has been retracted, corrected, or
+  flagged with an expression of concern, by querying the Crossref REST API.
+  It reads both publisher-asserted update records and the Retraction Watch
+  records Crossref backfills, because many retractions -- including the 1998
+  Wakefield MMR paper -- carry no structured retraction metadata from the
+  publisher at all and are only visible through the latter. It ships as a
+  Python library and command-line tool, a Model Context Protocol (MCP)
+  server for AI agents, and a GitHub Action for continuous integration, all
+  sharing one detection implementation.
+type: software
+authors:
+  - family-names: Bajaman
+    given-names: Waleed
+    alias: wedo911
+repository-code: "https://github.com/wedo911/citeguard"
+url: "https://github.com/wedo911/citeguard"
+license: MIT
+version: 0.1.1
+date-released: "2026-08-26"
+keywords:
+  - retraction
+  - retracted publications
+  - research integrity
+  - citation checking
+  - bibliography
+  - Crossref
+  - Retraction Watch
+  - reproducibility
+  - open science
+  - Model Context Protocol
